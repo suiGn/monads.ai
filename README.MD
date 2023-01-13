@@ -7,15 +7,7 @@ Welcome to monad, the client-side component of our hybrid AI project, Lisa. Mona
 - Personalized AI that is tailored to your individual needs and preferences
 - Scalable AI that can handle a wide range of tasks and workloads
 - Seamless integration with the server-side component of our hybrid AI project, Lisa
-- Open and inclusive community that encourages participation and contribution
 
-## Getting Started
-
-To get started with monad, follow these steps:
-
-1. Clone the repository to your local machine
-2. Install the necessary dependencies (e.g., Node.js, npm)
-3. Run the project with the command `npm start`
 
 ## Contributing
 
