@@ -1,0 +1,51 @@
+<!--html document-->
+<html>
+    <title>monad</title>
+    <head> 
+        <!--include styles/lisa.css-->
+        <link rel="stylesheet" href="styles/lisa.css">
+        <!--import treejs-->    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <!--REACT AND REACTDOM-->
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <!--BABEL-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/jsx" >
+            const app = document.getElementById('app');
+            
+
+            function Header(props){
+            return <h1>{props.title}</h1>;
+            }
+        
+            function Contacts(props){
+            var usrname = ["Jose", "Pamela", "Emma", "Olivia" , "Sara"];
+            
+            }
+            function MainSection(){
+                return(
+                    <div>
+                        <Header title="monadLisa" />
+                        <ul>
+                            {usrname.map((name) => <li key={name}>{name}</li>)}
+                        </ul>
+                        <p>Hello , do you wish to meet Lisa?</p>
+                    </div>
+                );
+            }
+
+        
+        ReactDOM.render(<MainSection />, app);
+        </script>
+        
+    </head>
+    <body>
+    <body>
+    <div id="app"></div>
+    <a>Yes</a>
+    <a>No</a>
+    
+    </body>
+</html>
