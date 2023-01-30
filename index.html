@@ -1,51 +1,57 @@
-<!--html document-->
+<!--html document sk-wFZGXV238h8zzGU1i6p6T3BlbkFJkbRx8gdZkjHIOQ
+    cUSkcm-->
 <html>
     <title>monad</title>
     <head> 
         <!--include styles/lisa.css-->
         <link rel="stylesheet" href="styles/lisa.css">
-        <!--import treejs-->    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+
+        <!-- JS Imports -->
+        <!--BABEL-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <!--REACT AND REACTDOM-->
         <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-        <!--BABEL-->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-        <script type="text/jsx" >
-            const app = document.getElementById('app');
-            
-
-            function Header(props){
-            return <h1>{props.title}</h1>;
-            }
         
-            function Contacts(props){
-            var usrname = ["Jose", "Pamela", "Emma", "Olivia" , "Sara"];
-            
-            }
-            function MainSection(){
-                return(
-                    <div>
-                        <Header title="monadLisa" />
-                        <ul>
-                            {usrname.map((name) => <li key={name}>{name}</li>)}
-                        </ul>
-                        <p>Hello , do you wish to meet Lisa?</p>
-                    </div>
-                );
-            }
+</head>
+<body>
+<div id="app"></div>
+        <script type="text/jsx">
+      const app = document.getElementById("app")
 
-        
-        ReactDOM.render(<MainSection />, app);
-        </script>
-        
-    </head>
-    <body>
-    <body>
-    <div id="app"></div>
-    <a>Yes</a>
-    <a>No</a>
+      function Header({ title }) {
+        return <h1>{title ? title : "Default title"}</h1>
+      }
+
+      function HomePage() {
+        const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"]
+
+        const [likes, setLikes] = React.useState(0)
+
+        function handleClick() {
+          setLikes(likes + 1)
+        }
+
+        return (
+          <div>
+            <Header title="Develop. Preview. Ship. 🚀" />
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+
+            <button onClick={handleClick}>Like ({likes})</button>
+          </div>
+        )
+      }
+
+      ReactDOM.render(<HomePage />, app)
+    </script>
     
+        <!--JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- include threejs from url-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     </body>
 </html>

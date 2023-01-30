@@ -12,6 +12,10 @@
         margin-bottom: 21px;
         margin-right: 21px;
         }
+
+        plot {
+          color: rgb(110, 174, 222);
+        }
         h2 {
         color: whitesmoke;
         font-family: system-ui;
