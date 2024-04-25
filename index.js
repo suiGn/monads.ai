@@ -1,2 +1,1 @@
-console.log("monads");
-//TALK TO MONAD OR TALK TO LISA
+console.log('Hello, monads!');
