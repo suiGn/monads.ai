@@ -1,7 +1,7 @@
 {
-  "name": "monadlisa",
+  "name": "monads.openai",
   "version": "2.0.4",
-  "description": "Functional programming. Under Development",
+  "description": "Functional programming. A bridge to Openai API.",
   "type": "module",
   "main": "index.js",
   "scripts": {

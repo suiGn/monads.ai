@@ -1,30 +1,24 @@
-console.log('Hello, monads!');
-
-import 'dotenv/config';
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  organization: 'org-5ZJbsjfUiniTbgfWq4PSRX7J'
-});
+class Monad {
+    constructor(apiKey, assistantId = null) {
+        this.openai = new OpenAI({
+            apiKey: apiKey
+        });
+        this.assistantId = assistantId;  // Store the assistant ID or null if not provided
+        console.log("Hello monads!");
+        console.log("I am:", this.assistantId);
+    }
 
-async function main() {
-    const completion = await openai.chat.completions.create({
-      messages: [{ role: "system", content: "You are a helpful assistant." }],
-      model: "gpt-3.5-turbo",
-    });
-  
-    console.log(completion.choices[0]);
-  }
-  
-  main();
+    // Additional methods utilizing the assistantId can include similar checks
+    async listAssistants() {
+        const myAssistants = await this.openai.beta.assistants.list({
+            order: "desc",
+            limit: "20",
+        });
 
-  async function listAssistants() {
-    const myAssistants = await openai.beta.assistants.list({
-      order: "desc",
-      limit: "20",
-    });
-  
-    console.log(myAssistants.data);
-  }
-  
-  listAssistants();
+        console.log(myAssistants.data);
+    }
+}
+
+export default Monad;
