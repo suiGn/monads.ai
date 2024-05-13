@@ -1,4 +1,4 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
 console.log("Monads.");
 const axios = require('axios');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;

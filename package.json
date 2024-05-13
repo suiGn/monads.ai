@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "name": "monads.openai",
+=======
+  "name": "monads",
+>>>>>>> Stashed changes
   "version": "2.0.4",
   "description": "Functional programming. A bridge to Openai API.",
   "type": "module",
